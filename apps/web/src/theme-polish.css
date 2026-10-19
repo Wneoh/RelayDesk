@@ -1,0 +1,449 @@
+/* Matched light and dark palettes. Accent color is reserved for actions and status. */
+:root {
+  --canvas: #f4f6fb;
+  --panel: #fff;
+  --panel-raised: #fff;
+  --ink: #192b43;
+  --copy: #455871;
+  --hint: #52657c;
+  --edge: #dce3ef;
+  --edge-strong: #8798b1;
+  --accent: #5545d7;
+  --accent-soft: #eeebff;
+  --chart-primary: #5545d7;
+  --chart-secondary: #08745e;
+}
+html[data-theme='dark'] {
+  --canvas: #0c1322;
+  --panel: #141f33;
+  --panel-raised: #1b2941;
+  --ink: #f0f4fc;
+  --copy: #c0cde1;
+  --hint: #afc0d8;
+  --edge: #2c3c56;
+  --edge-strong: #7790b3;
+  --accent: #baaaff;
+  --accent-soft: #302950;
+  --chart-primary: #b6a6ff;
+  --chart-secondary: #79ddbd;
+}
+body,
+html[data-theme='dark'] body,
+.main-shell,
+html[data-theme='dark'] .main-shell {
+  background: var(--canvas);
+  color: var(--ink);
+}
+.panel,
+.metric-card,
+.agent-card,
+.report-toolbar,
+html[data-theme='dark'] .panel,
+html[data-theme='dark'] .metric-card,
+html[data-theme='dark'] .agent-card,
+html[data-theme='dark'] .report-toolbar {
+  background: var(--panel);
+  border-color: var(--edge);
+  border-radius: 14px;
+  box-shadow: 0 2px 5px #13223c04;
+}
+.topbar,
+html[data-theme='dark'] .topbar {
+  background: var(--panel);
+  border-color: var(--edge);
+}
+.main-content h1,
+html[data-theme='dark'] .main-content h1 {
+  color: var(--ink);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+}
+.section-heading h2,
+.team-live-agent strong,
+.attention-main > strong,
+.agent-card h2,
+.detail-heading h1,
+.subject-cell .ticket-subject-link,
+html[data-theme='dark'] .section-heading h2,
+html[data-theme='dark'] .team-live-agent strong,
+html[data-theme='dark'] .attention-main > strong,
+html[data-theme='dark'] .agent-card h2,
+html[data-theme='dark'] .subject-cell .ticket-subject-link {
+  color: var(--ink);
+  font-weight: 600;
+}
+.metric-card > strong,
+html[data-theme='dark'] .metric-card > strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+.metric-card > div:first-child,
+html[data-theme='dark'] .metric-card > div:first-child {
+  color: var(--copy);
+  font-weight: 550;
+}
+.page-heading p,
+.metric-card > p,
+.report-scope,
+.report-context,
+.report-updated,
+.report-panel-note,
+.report-table small,
+.agent-card > p,
+.specialty,
+.panel-footer,
+.workspace-footer,
+.team-live-agent small,
+.attention-main > span,
+.attention-status small,
+html[data-theme='dark'] .page-heading p,
+html[data-theme='dark'] .metric-card > p,
+html[data-theme='dark'] .report-scope,
+html[data-theme='dark'] .report-context,
+html[data-theme='dark'] .report-updated,
+html[data-theme='dark'] .report-panel-note,
+html[data-theme='dark'] .report-table small,
+html[data-theme='dark'] .agent-card > p,
+html[data-theme='dark'] .specialty,
+html[data-theme='dark'] .panel-footer,
+html[data-theme='dark'] .workspace-footer,
+html[data-theme='dark'] .team-live-agent small,
+html[data-theme='dark'] .attention-main > span,
+html[data-theme='dark'] .attention-status small {
+  color: var(--copy);
+}
+.eyebrow,
+.section-kicker,
+html[data-theme='dark'] .eyebrow,
+html[data-theme='dark'] .section-kicker {
+  color: var(--hint);
+  font-weight: 650;
+  letter-spacing: 1.3px;
+}
+.button {
+  border-radius: 9px;
+  font-weight: 550;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.button.primary {
+  background: #5545d7;
+  border-color: #5545d7;
+  color: #fff;
+  box-shadow: 0 2px 4px #5545d721;
+}
+.button.primary:hover {
+  background: #4737bf;
+  border-color: #4737bf;
+}
+html[data-theme='dark'] .button.primary {
+  background: #6753df;
+  border-color: #9d8ff1;
+  color: #fff;
+  box-shadow: none;
+}
+html[data-theme='dark'] .button.primary:hover {
+  background: #735eea;
+}
+.button.secondary,
+.outline-pill,
+html[data-theme='dark'] .button.secondary,
+html[data-theme='dark'] .outline-pill {
+  background: var(--panel);
+  border-color: var(--edge-strong);
+  color: var(--copy);
+}
+.button.secondary:hover,
+html[data-theme='dark'] .button.secondary:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+input,
+select,
+textarea {
+  border-radius: 9px;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px #7665e521;
+}
+.header-search input,
+html[data-theme='dark'] .header-search input {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  color: var(--copy);
+}
+.header-search input::placeholder,
+html[data-theme='dark'] .header-search input::placeholder {
+  color: var(--hint);
+}
+.header-search,
+html[data-theme='dark'] .header-search {
+  color: var(--hint);
+}
+.metric-card .metric-icon {
+  color: #6650bb;
+  background: #efebff;
+}
+.metric-card.cyan .metric-icon {
+  color: #15627a;
+  background: #e5f2f8;
+}
+.metric-card.mint .metric-icon {
+  color: #176e52;
+  background: #e3f3eb;
+}
+.metric-card.amber .metric-icon {
+  color: #88530c;
+  background: #fff1d8;
+}
+html[data-theme='dark'] .metric-card .metric-icon {
+  color: #d0c2ff;
+  background: #302750;
+}
+html[data-theme='dark'] .metric-card.cyan .metric-icon {
+  color: #a2def7;
+  background: #173a50;
+}
+html[data-theme='dark'] .metric-card.mint .metric-icon {
+  color: #96dfbd;
+  background: #173c33;
+}
+html[data-theme='dark'] .metric-card.amber .metric-icon {
+  color: #ffce84;
+  background: #42321a;
+}
+.report-tabs,
+html[data-theme='dark'] .report-tabs,
+.section-heading,
+html[data-theme='dark'] .section-heading {
+  border-color: var(--edge);
+}
+.report-tabs button,
+html[data-theme='dark'] .report-tabs button {
+  color: var(--copy);
+}
+.report-tabs button[aria-selected='true'],
+html[data-theme='dark'] .report-tabs button[aria-selected='true'] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.performance-legend span,
+.performance-legend strong,
+html[data-theme='dark'] .performance-legend span,
+html[data-theme='dark'] .performance-legend strong {
+  color: var(--copy);
+}
+.report-table th,
+.report-table td,
+html[data-theme='dark'] .report-table th,
+html[data-theme='dark'] .report-table td {
+  border-color: var(--edge);
+  color: var(--copy);
+}
+.report-table tbody th strong,
+html[data-theme='dark'] .report-table tbody th strong {
+  color: var(--ink);
+}
+.report-table thead th {
+  background: #f7f9fc;
+  color: #455871;
+}
+.report-table thead th,
+html[data-theme='dark'] .report-table thead th {
+  font-weight: 600;
+}
+html[data-theme='dark'] .report-table thead th {
+  background: #101b2c;
+  color: #bdcbe0;
+}
+.report-callout,
+html[data-theme='dark'] .report-callout {
+  background: var(--accent-soft);
+  border-color: var(--edge);
+  color: var(--accent);
+}
+.report-callout p,
+.report-definitions p,
+html[data-theme='dark'] .report-callout p,
+html[data-theme='dark'] .report-definitions p {
+  color: var(--copy);
+}
+.report-definitions,
+html[data-theme='dark'] .report-definitions {
+  background: var(--panel-raised);
+  border-color: var(--edge);
+}
+.report-definitions summary,
+.daily-details summary,
+html[data-theme='dark'] .report-definitions summary,
+html[data-theme='dark'] .daily-details summary {
+  color: var(--accent);
+}
+html[data-theme='dark'] .alerts-popover {
+  background: var(--panel-raised);
+  border-color: var(--edge-strong);
+  color: var(--ink);
+  box-shadow: 0 18px 45px #0006;
+}
+html[data-theme='dark'] .alerts-popover h3 {
+  color: var(--ink);
+}
+.alerts-popover button,
+html[data-theme='dark'] .alerts-popover button {
+  color: var(--copy);
+}
+html[data-theme='dark'] .message-body,
+html[data-theme='dark'] .message-meta strong {
+  color: var(--ink);
+}
+html[data-theme='dark'] .message-meta time,
+html[data-theme='dark'] .message-meta > span {
+  color: var(--hint);
+}
+html[data-theme='dark'] .response-draft-card {
+  background: #201d37;
+  border-color: #8c7aca;
+}
+html[data-theme='dark'] .response-draft-card > p,
+html[data-theme='dark'] .response-draft-card label,
+html[data-theme='dark'] .draft-actions > span {
+  color: var(--copy);
+}
+html[data-theme='dark'] .response-draft-title h2 {
+  color: var(--ink);
+}
+.approval-note {
+  margin: 18px 0;
+  color: var(--copy);
+}
+.approval-note textarea {
+  width: 100%;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 26px;
+}
+.role-cards article {
+  padding: 24px;
+}
+.role-cards svg {
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.role-cards h2 {
+  font-size: 20px;
+  color: var(--ink);
+}
+.role-cards p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--copy);
+  margin-top: 10px;
+}
+.role-badge {
+  display: inline-flex;
+  padding: 4px 9px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4e339f;
+  background: #eee8ff;
+}
+.role-support {
+  color: #13644c;
+  background: #e1f4ea;
+}
+.role-customer {
+  color: #40536d;
+  background: #eaf0f7;
+}
+html[data-theme='dark'] .role-admin {
+  color: #daccff;
+  background: #382c59;
+}
+html[data-theme='dark'] .role-support {
+  color: #9ce5c4;
+  background: #193c33;
+}
+html[data-theme='dark'] .role-customer {
+  color: #c0d1eb;
+  background: #25364f;
+}
+.button.danger {
+  color: #9b253e;
+  background: #fff1f3;
+  border: 1px solid #dca9b5;
+}
+.button.danger:hover {
+  background: #ffe2e8;
+}
+html[data-theme='dark'] .button.danger {
+  color: #ffb8c6;
+  background: #411f2c;
+  border-color: #a86c7e;
+}
+.properties-card .button.danger {
+  margin: 14px 0;
+}
+@media (max-width: 850px) {
+  .role-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .role-cards article {
+    padding: 20px;
+  }
+}
+html[data-theme='dark'] .ticket-table td,
+html[data-theme='dark'] .ticket-table th,
+html[data-theme='dark'] .agent-cell,
+html[data-theme='dark'] .unassigned,
+html[data-theme='dark'] .subject-cell > div,
+html[data-theme='dark'] .properties-card label {
+  color: var(--copy);
+}
+html[data-theme='dark'] .report-count-strip,
+html[data-theme='dark'] .outcome-bars,
+html[data-theme='dark'] .usage-grid span,
+html[data-theme='dark'] .usage-grid small {
+  color: var(--copy);
+}
+html[data-theme='dark'] .report-count-strip b,
+html[data-theme='dark'] .usage-grid strong {
+  color: var(--ink);
+}
+@media (max-height: 850px) {
+  .sidebar {
+    padding-top: 20px;
+  }
+  .workspace-switch {
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+  .nav-item {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 3px;
+  }
+  .nav-item.active {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+@media (max-height: 700px) {
+  .workspace-switch {
+    display: none;
+  }
+}

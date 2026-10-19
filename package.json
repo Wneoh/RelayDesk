@@ -1,0 +1,34 @@
+{
+  "name": "relaydesk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A real-time support workspace for small teams.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c blue,green \"npm run dev -w @relaydesk/api\" \"npm run dev -w @relaydesk/web\"",
+    "build": "npm run build -w @relaydesk/api && npm run build -w @relaydesk/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test -w @relaydesk/api",
+    "test:e2e": "playwright test",
+    "db:migrate": "npm run db:migrate -w @relaydesk/api",
+    "db:seed": "npm run db:seed -w @relaydesk/api",
+    "worker": "npm run worker -w @relaydesk/api",
+    "demo": "concurrently -k -n api,web -c blue,green \"npm run demo -w @relaydesk/api\" \"npm run dev -w @relaydesk/web\"",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "start": "npm run start -w @relaydesk/api",
+    "db:admin": "npm run db:admin -w @relaydesk/api"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "concurrently": "^9.2.1",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3"
+  }
+}
